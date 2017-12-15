@@ -25,3 +25,5 @@ Options and flags:
 #+END_SRC
 
 If ~--tiff~ is not supplied, the output TIFF will be named ~stitched.tiff~.
+
+If ~--extent~ is not supplied, the entire layer will be queried.
