@@ -1,0 +1,25 @@
+* GeoTrellis Stitch
+
+Useful for quick visualization of a GeoTrellis layer written to S3.
+By specifying a low (re: closer to zero, say 4) zoom level, the processing
+should be quite quick.
+
+#+BEGIN_SRC
+Usage: gt-stitch --bucket <string> --prefix <string> --layer <string> --zoom <integer> [--tiff <string>]
+Turn a GeoTrellis layer into a GeoTiff
+Options and flags:
+    --help
+        Display this help text.
+    --bucket <string>
+        S3 bucket.
+    --prefix <string>
+        Path to GeoTrellis layer catalog.
+    --layer <string>
+        Name of the layer.
+    --zoom <integer>
+        Zoom level of the layer to stitch.
+    --tiff <string>
+        Name of the TIFF to be output.
+#+END_SRC
+
+If ~--tiff~ is not supplied, the output TIFF will be named ~stitched.tiff~.
