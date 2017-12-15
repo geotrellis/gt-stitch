@@ -5,7 +5,7 @@ By specifying a low (re: closer to zero, say 4) zoom level, the processing
 should be quite quick.
 
 #+BEGIN_SRC
-Usage: gt-stitch --bucket <string> --prefix <string> --layer <string> --zoom <integer> [--tiff <string>]
+Usage: gt-stitch --bucket <string> --prefix <string> --layer <string> --zoom <integer> [--tiff <string>] [--extent <string>]
 Turn a GeoTrellis layer into a GeoTiff
 Options and flags:
     --help
@@ -20,6 +20,8 @@ Options and flags:
         Zoom level of the layer to stitch.
     --tiff <string>
         Name of the TIFF to be output.
+    --extent <string>
+        Extent to bound the layer query (LatLng).
 #+END_SRC
 
 If ~--tiff~ is not supplied, the output TIFF will be named ~stitched.tiff~.
