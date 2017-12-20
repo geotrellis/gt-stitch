@@ -43,7 +43,7 @@ object Stitch extends CommandApp(
     val prefixO: Opts[String] = Opts.option[String]("prefix", help = "Path to GeoTrellis layer catalog.")
     val layerO:  Opts[String] = Opts.option[String]("layer",  help = "Name of the layer.")
     val zoomO:   Opts[UInt]   = Opts.option[UInt]("zoom",     help = "Zoom level of the layer to stitch.")
-    val tiffO:   Opts[String] = Opts.option[String]("tiff",   help = "Name of the TIFF to be output.").withDefault("stiched.tiff")
+    val tiffO:   Opts[String] = Opts.option[String]("tiff",   help = "Name of the TIFF to be output.").withDefault("stitched.tiff")
     val extentO: Opts[Option[Extent]] = Opts.option[String]("extent", help = "Extent to bound the layer query (LatLng).").orNone.map(_ >>= readExtent)
 
     (bucketO, prefixO, layerO, zoomO, tiffO, extentO).mapN { (bucket, prefix, layer, zoom, tiff, extent) =>
